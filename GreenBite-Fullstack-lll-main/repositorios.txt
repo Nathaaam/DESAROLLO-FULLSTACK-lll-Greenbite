@@ -1,0 +1,50 @@
+===================================================
+GreenBite - Evaluación Parcial N°2 — DSY1106
+Repositorios de componentes
+Integrantes: Nathan Gutierrez, Cristobal Reyes, Allan Nuñez
+===================================================
+
+REPOSITORIO PRINCIPAL
+---------------------
+URL: https://github.com/[usuario]/greenbite-p2
+Descripción: Repositorio raíz del proyecto. Contiene documentación general,
+             instrucciones de setup y enlaces a los sub-repositorios.
+Rama principal: main | Rama de integración: develop
+
+COMPONENTES FRONTEND
+--------------------
+URL: https://github.com/[usuario]/greenbite-frontend
+Descripción: Aplicación React empaquetada como NPM. Implementa los patrones
+             Container/Presentational, Custom Hooks y Observer (Context API).
+             Incluye pruebas unitarias con React Testing Library.
+Puerto local: 3000
+
+COMPONENTES BACKEND
+--------------------
+
+1. BFF (Backend For Frontend)
+   URL: https://github.com/[usuario]/greenbite-bff
+   Descripción: Spring Boot 3 + WebFlux. Agrega respuestas de ms-suscripciones
+                y ms-catalogo en un único endpoint para el dashboard del usuario.
+                Implementa patrones BFF, Service Layer y DTO.
+   Puerto local: 8080
+
+2. Microservicio de Suscripciones
+   URL: https://github.com/[usuario]/ms-suscripciones
+   Descripción: Spring Boot 3 + PostgreSQL + Kafka. Gestiona el ciclo de vida
+                de suscripciones (crear, pausar, cancelar). Publica eventos en
+                topic 'suscripcion-events'. Implementa Repository, Service Layer y DTO.
+   Puerto local: 8081
+
+3. Microservicio de Catálogo
+   URL: https://github.com/[usuario]/ms-catalogo
+   Descripción: Spring Boot 3 + MongoDB + Kafka. Gestiona catálogo dinámico
+                de productos por ciudad y temporada. Consume eventos del topic
+                'inventario-productor'. Implementa Repository, Service Layer y DTO.
+   Puerto local: 8082
+
+NOTAS
+-----
+- Reemplazar [usuario] con el nombre de usuario de GitHub del equipo.
+- Todos los repositorios siguen la estrategia Git Flow Simplificado.
+- Ramas: main (producción), develop (integración), feature/* (desarrollo).
